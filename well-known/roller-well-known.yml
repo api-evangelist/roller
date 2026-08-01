@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of /.well-known/ on ROLLER hosts
+hosts:
+  - host: https://www.roller.software
+    documents:
+      - path: /.well-known/security.txt
+        status: 301
+        redirect: https://www.roller.software/
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://docs.roller.app
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://api.roller.app
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+notes: >-
+  No /.well-known/ discovery documents are published on the ROLLER website,
+  docs, or API hosts. The security.txt path on the marketing site redirects to
+  the homepage (no RFC 9116 file). Absence recorded as valid data.

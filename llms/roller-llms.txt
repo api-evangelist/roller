@@ -1,0 +1,37 @@
+# ROLLER
+
+> ROLLER is a cloud-based venue management platform for the attractions and leisure industry (trampoline parks, family entertainment centers, museums, zoos, aquariums, water parks and amusement venues). It unifies ticketing and online bookings, point of sale, memberships, digital waivers, integrated payments, CRM and self-serve kiosks. ROLLER exposes a real-time REST API and a Reporting (Data) API, plus webhooks and OCTO API compatibility. Authentication is OAuth2 client credentials; API access is an add-on to a ROLLER subscription.
+
+## APIs
+
+- [ROLLER REST API](https://docs.roller.app/docs/api/rest): Real-time API for products, sessions, availability and creating/managing bookings. Base URL https://api.roller.app.
+- [ROLLER Reporting API](https://docs.roller.app/docs/api/reporting): Read-only Data API for extracting venue data to external databases and BI/analytics platforms.
+
+## Authentication
+
+- [Authentication](https://docs.roller.app/docs/api/authentication): OAuth2 client-credentials flow; exchange client id/secret at https://api.roller.app/token for a short-lived Bearer token. Reuse the token until a 401. Limit: 1 request/second per credential set (429 on exceed).
+
+## Docs
+
+- [Developer Center](https://docs.roller.app/): Home of all ROLLER API documentation.
+- [API Overview](https://docs.roller.app/docs/api/overview): Guide to the available APIs.
+- [REST API Reference](https://docs.roller.app/docs/rest-api/fd3c345161c6c-rest-api-specification): Endpoint reference.
+- [Getting API Access](https://docs.roller.app/docs/api/getting-api-access): How to generate API keys.
+- [Webhooks Overview](https://docs.roller.app/docs/api/webhooks-overview): Event-driven, real-time notifications.
+- [Postman Collection](https://docs.roller.app/docs/api/postman-collection): Get started with Postman.
+- [Changelog](https://docs.roller.app/docs/api/changelog): Dated API changelog.
+
+## Operations
+
+- [Status Page](https://status.roller.app/): Live system status.
+- [Roadmap / Launchpad](https://launchpad.roller.app/): Product roadmap and feature requests.
+- [Help Center](https://mysupport.roller.software/): Support and knowledge base.
+- [Trust Center](https://trust.roller.software/): Security posture — SOC 2, PCI DSS.
+
+## Company
+
+- [Website](https://www.roller.software/): ROLLER venue management platform.
+- [API & Integrations](https://www.roller.software/features/api-integrations/): API feature overview.
+- [Integration Partners](https://www.roller.software/integration-partners/): Partner directory.
+- [Pricing](https://www.roller.software/pricing/): Plans and pricing.
+- [Blog](https://www.roller.software/blog/): Product and industry blog.

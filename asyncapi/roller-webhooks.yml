@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.roller.app/docs/api/webhooks-overview
+spec_type: Webhooks
+docs: https://docs.roller.app/docs/api/webhooks-overview
+reference: https://docs.roller.app/docs/rest-api/ebd73c57a6e38-view-webhooks
+summary: >-
+  ROLLER documents webhooks for real-time, event-driven integrations —
+  subscribe to key events so external systems stay in sync without polling.
+  Webhook subscriptions are managed through the REST API (view/create/manage
+  webhooks). The full machine-readable event catalog is served from the
+  Stoplight-hosted Developer Center and requires the live docs to enumerate;
+  individual event topics were not extractable at enrichment time and are not
+  fabricated here.
+transport: https-callback
+subscription_management:
+  api: ROLLER REST API
+  operations:
+    - View webhooks (GET)
+    - Create/manage webhook subscriptions
+  reference: https://docs.roller.app/docs/rest-api/ebd73c57a6e38-view-webhooks
+notes: >-
+  No published AsyncAPI document was found; this artifact captures the
+  documented webhook (event) surface so the Webhooks signal is represented.

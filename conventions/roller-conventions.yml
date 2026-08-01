@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.roller.app/docs/api/overview
+docs: https://docs.roller.app/docs/api/overview
+authentication:
+  style: oauth2-client-credentials
+  token_url: https://api.roller.app/token
+  header: "Authorization: Bearer <access_token>"
+  see: authentication/roller-authentication.yml
+idempotency:
+  supported: true
+  mechanism: >-
+    ROLLER's booking creation flow is designed around an idempotent
+    two-step model: a booking is first created/held and then confirmed, so a
+    retried confirmation does not double-book. Reuse of a short-lived access
+    token (rather than re-minting per request) is the documented pattern to
+    avoid duplicate token churn and 429s. Consult the Create a Booking
+    reference for the hold/confirm semantics.
+  reference: https://docs.roller.app/docs/rest-api/5703708522c6b-create-a-booking
+rate_limiting:
+  limit: 1 request per second per credential set
+  exceeded_status: 429
+  guidance: >-
+    Do not share a single credential set across multiple applications; do not
+    request a new access token per API call. Reuse the current token until a
+    401 is returned.
+  see: rate-limits/roller-rate-limits.yml
+versioning:
+  scheme: uri-path
+  notes: >-
+    The REST and Reporting APIs are documented and versioned through the
+    ROLLER Developer Center; changes are announced via the API changelog.
+  changelog: https://docs.roller.app/docs/api/changelog
+error_handling:
+  auth_expiry: 401 signals an expired/invalid token — request a new token
+  rate_limit: 429 signals the 1 req/sec limit was exceeded
+  see: lifecycle/roller-lifecycle.yml
+events:
+  webhooks: true
+  see: asyncapi/roller-webhooks.yml

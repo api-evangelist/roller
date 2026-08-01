@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.roller.app/docs/api/authentication
+docs: https://docs.roller.app/docs/api/authentication
+summary:
+  types: [oauth2]
+  oauth2_flows: [clientCredentials]
+  notes: >-
+    ROLLER APIs use an OAuth2 client-credentials flow. The consuming
+    application exchanges its client id and client secret (issued by ROLLER)
+    at the /token endpoint for a short-lived access token, which is then sent
+    as a Bearer token on API calls. Access tokens are short-lived; the expiry
+    is returned in the token response. Reuse the current token until a 401 is
+    received, then request a new one — requesting a new token per call can
+    trigger 429 rate-limit responses. API access is an add-on to a ROLLER
+    subscription; credentials are generated per venue via Getting API Access.
+schemes:
+  - name: OAuth2ClientCredentials
+    type: oauth2
+    flow: clientCredentials
+    token_url: https://api.roller.app/token
+    bearer_format: JWT
+    sources: [https://docs.roller.app/docs/api/authentication]

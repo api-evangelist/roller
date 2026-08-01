@@ -1,0 +1,14 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.roller.app/docs/api/changelog
+docs: https://docs.roller.app/docs/api/changelog
+scheme: dated-developer-center-changelog
+current_version: v1
+notes: >-
+  ROLLER maintains a dated API changelog in its Developer Center
+  (docs.roller.app/docs/api/changelog) to announce additions and changes to
+  the REST and Reporting APIs. The changelog is served from a JS-rendered
+  Stoplight site; individual dated entries were not machine-extractable at
+  enrichment time and are intentionally not fabricated. The live changelog is
+  the source of truth.
+entries: []

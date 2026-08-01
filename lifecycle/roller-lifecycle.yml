@@ -1,0 +1,17 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.roller.app/docs/api/changelog
+versioning:
+  scheme: uri-path
+  docs: https://docs.roller.app/docs/api/overview
+  notes: >-
+    ROLLER publishes REST and Reporting APIs through its Developer Center and
+    announces additions and changes through a dated API changelog.
+changelog: https://docs.roller.app/docs/api/changelog
+status_page: https://status.roller.app/
+roadmap: https://launchpad.roller.app/
+support: https://mysupport.roller.software/
+notes: >-
+  No public deprecation policy or RFC 8594 Sunset/Deprecation header support
+  was found at time of enrichment. Status is published at status.roller.app and
+  the product roadmap / feature requests are tracked at launchpad.roller.app.

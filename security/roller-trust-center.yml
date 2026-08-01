@@ -1,0 +1,13 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+source: https://www.roller.software/security
+url: https://www.roller.software/security
+certifications:
+- SOC 2
+- PCI DSS
+evidence:
+- source: https://www.roller.software/security
+  keywords:
+  - soc 2
+  - pci dss

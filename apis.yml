@@ -1,7 +1,17 @@
 aid: roller
 name: ROLLER
-description: ROLLER is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  ROLLER is a cloud-based venue management platform for the attractions and
+  leisure industry — trampoline parks, family entertainment centers, museums,
+  zoos, aquariums, water parks and amusement venues. It unifies ticketing and
+  online bookings, point of sale, memberships and passes, digital waivers,
+  integrated payments, a CRM and guest experience score, self-serve kiosks and
+  gift cards in a single system. ROLLER exposes two public APIs — a real-time
+  REST API for products, sessions, availability and bookings, and a Reporting
+  (Data) API for extracting venue data to external warehouses and BI tools —
+  plus webhooks for event-driven integrations and OCTO API compatibility for
+  channel/distribution partners. API access is an add-on to a ROLLER
+  subscription and is authenticated with OAuth2 client credentials.
 url: https://raw.githubusercontent.com/api-evangelist/roller/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,17 +19,132 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://cdn.rollerdigital.com/assets/logos/roller-logo.svg
 tags:
 - Company
-apis: []
+- Venue Management
+- Attractions
+- Ticketing
+- Bookings
+- Point of Sale
+- Payments
+- Leisure
+- Reservations
+- Webhooks
+apis:
+- name: ROLLER REST API
+  description: >-
+    General-purpose real-time REST API for the ROLLER platform. Retrieve
+    products, sessions and availability, and create and manage real-time
+    bookings to power external checkout and booking journeys. Authenticated
+    with OAuth2 client credentials; limited to one request per second per
+    credential set.
+  humanURL: https://docs.roller.app/docs/api/rest
+  baseURL: https://api.roller.app
+  tags:
+  - Bookings
+  - Products
+  - Sessions
+  - Availability
+  - Payments
+  properties:
+  - type: APIReference
+    url: https://docs.roller.app/docs/rest-api/fd3c345161c6c-rest-api-specification
+  - type: Authentication
+    url: authentication/roller-authentication.yml
+  - type: Webhooks
+    url: asyncapi/roller-webhooks.yml
+- name: ROLLER Reporting API
+  description: >-
+    Read-only Data/Reporting API that gives venues a mechanism to extract a
+    copy of their ROLLER data and syndicate it to an external database, data
+    warehouse or BI/analytics platform. Designed for periodic (hourly/daily)
+    extraction, not real-time use cases, and cannot write data to ROLLER.
+  humanURL: https://docs.roller.app/docs/api/reporting
+  baseURL: https://api.roller.app
+  tags:
+  - Reporting
+  - Analytics
+  - Data Warehouse
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/roller-trust-center.yml
 - type: Website
   url: https://www.roller.software/
+- type: DeveloperPortal
+  url: https://docs.roller.app/
+- type: Documentation
+  url: https://docs.roller.app/docs/api/overview
+- type: APIReference
+  url: https://docs.roller.app/docs/api/rest
+- type: GettingStarted
+  url: https://docs.roller.app/docs/api/getting-api-access
+- type: Authentication
+  url: authentication/roller-authentication.yml
+- type: Webhooks
+  url: asyncapi/roller-webhooks.yml
+- type: Idempotency
+  url: conventions/roller-conventions.yml
+- type: Conventions
+  url: conventions/roller-conventions.yml
+- type: ChangeLog
+  url: https://docs.roller.app/docs/api/changelog
+- type: StatusPage
+  url: https://status.roller.app/
+- type: Roadmap
+  url: https://launchpad.roller.app/
+- type: Lifecycle
+  url: lifecycle/roller-lifecycle.yml
+- type: Conformance
+  url: conformance/roller-conformance.yml
+- type: Compliance
+  url: security/roller-trust-center.yml
+- type: Postman
+  url: https://docs.roller.app/docs/api/postman-collection
+- type: Support
+  url: https://mysupport.roller.software/
+- type: HelpCenter
+  url: https://mysupport.roller.software/hc/en-us
+- type: Blog
+  url: https://www.roller.software/blog/
+- type: Pricing
+  url: https://www.roller.software/pricing/
+- type: SignUp
+  url: https://www.roller.software/request-a-demo/
+- type: TermsOfService
+  url: https://www.roller.software/master-terms
+- type: PrivacyPolicy
+  url: https://www.roller.software/legal/privacy-policy/
+- type: RateLimits
+  url: rate-limits/roller-rate-limits.yml
+- type: DomainSecurity
+  url: security/roller-domain-security.yml
+- type: WellKnown
+  url: well-known/roller-well-known.yml
+- type: LLMsTxt
+  url: llms/roller-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1

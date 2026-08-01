@@ -1,0 +1,14 @@
+generated: '2026-07-21'
+method: searched
+source: https://mysupport.roller.software/docs/api-overview
+docs: https://mysupport.roller.software/docs/api-overview
+rate_limits:
+  - scope: per-credential-set
+    limit_count: 1
+    window: 1s
+    description: >-
+      Each API credential set (client id / client secret pair) is limited to
+      one API call per second. Exceeding the limit — or requesting a new
+      access token on every call — returns HTTP 429. Do not share a single
+      credential set across multiple applications.
+    exceeded_status: 429
