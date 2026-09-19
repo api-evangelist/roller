@@ -51,7 +51,7 @@ tags:
 - Venue Management
 - Attractions
 - Ticketing
-- Bookings
+- Booking
 - Point-of-Sale
 - Payments
 - Leisure
@@ -79,7 +79,7 @@ apis:
   humanURL: https://docs.roller.app/docs/api/rest
   baseURL: https://api.roller.app
   tags:
-  - Bookings
+  - Booking
   - Product
   - Sessions
   - Availability
