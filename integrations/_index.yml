@@ -16,3 +16,76 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: roller-octo-self-certification-directory-certify-octo-travel
+  label: OCTO self-certification directory (certify.octo.travel)
+  partner_name: OCTO self-certification directory (certify.octo.travel)
+  category: OCTO API self-certification
+  type: register
+  channel: standard-directory
+  evidence: https://certify.octo.travel/verify
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: OCTO self-certification directory (certify.octo.travel)
+    standard: OCTO (Open Connectivity for Tours, Activities & Attractions) API specification
+    spec_file: null
+    spec_url: https://app.swaggerhub.com/apis-docs/OCTO-API/OCTO-API/1.0
+    standard_repo: octo
+    role: octo-certified
+    registrations:
+    - registered_name: ROLLER
+      register_status: certified
+      register_id: rm0KrY1W
+      matched_domain: null
+      matched_by: register-name
+      certificates:
+      - certificate_id: 2d740c02-7464-48dc-b4ad-674e5899a6c2
+        type: supplier
+        status: APPROVED
+        is_active: true
+        certified_at: '2026-08-19'
+        revoked_at: null
+      register_name_note: register-name 'roller' = roller; no wikidata P856
+    detected_by: sweep-octo-tours-activities.py
+    detected: '2026-10-23'
+    certified_products:
+    - product: OCTO supplier certification
+      lapsed: false
+      certified_at: '2026-08-19'
+      certificate_id: 2d740c02-7464-48dc-b4ad-674e5899a6c2
+    signal_note: certified_products = one entry per OCTO certification type (reseller / supplier), never per certificate;
+      lapsed = the certificate is no longer active (is_active false)
+    matched_by: register-name
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
+- slug: roller-octo-member-directory-octo-travel
+  label: OCTO member directory (octo.travel)
+  partner_name: OCTO member directory (octo.travel)
+  category: OCTO standards body membership (tours, activities & attractions connectivity)
+  type: register
+  channel: standard-directory
+  evidence: https://octo.travel/members
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: OCTO member directory (octo.travel)
+    standard: OCTO (Open Connectivity for Tours, Activities & Attractions) API specification
+    spec_file: null
+    spec_url: https://app.swaggerhub.com/apis-docs/OCTO-API/OCTO-API/1.0
+    standard_repo: octo
+    role: technology-member
+    registrations:
+    - registered_name: Roller Digital
+      register_status: member
+      register_id: VmAwEM49
+      matched_domain: roller.software
+      matched_by: domain+local-verified
+      member_type: technology-member
+    detected_by: sweep-octo-tours-activities.py
+    detected: '2026-10-23'
+    signal_note: 'participation only: OCTO standards-body membership; membership certifies nothing'
+  status: not-a-workflow
+  arazzo: null
